@@ -1,9 +1,17 @@
 import React from 'react';
 
 export default class Route extends React.Component {
-    
-    onAddBeta() {
-        this.state={}
+    constructor(props) {
+        super(props);
+        this.state={
+            likes: 0
+        };
+    }
+
+    onAddLike() {
+        this.setState({
+            likes: this.state.likes + 1
+        });
     }
     
     render() {
@@ -24,10 +32,14 @@ export default class Route extends React.Component {
                     <img src="#" alt="3D Model"></img>
                 </div>
                 <div className="submitForm">
-                    <button onClick={ () => this.onAddBeta()}>Add beta!</button>
+                    <button onClick={ () => this.submit}>Add beta!</button>
                     <form>
                         <input type="form" placeholder="beta baby"></input>
                     </form>
+                </div>
+                <div className="likeButton">
+                    <button onClick={ () => this.onAddLike()}>Like Route</button>
+                    <p>{this.state.likes}</p>
                 </div>
             </div>
         )
