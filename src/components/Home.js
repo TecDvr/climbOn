@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Route from './Route';
 
 export default class Home extends React.Component {
@@ -31,4 +30,4 @@ export default class Home extends React.Component {
             </div>
         );
     }
-}
+} 

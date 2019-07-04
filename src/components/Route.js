@@ -1,7 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react';
 
 export default class Route extends React.Component {
+    
+    onAddBeta() {
+        this.state={}
+    }
+    
     render() {
         return(
             <div>
@@ -13,8 +17,17 @@ export default class Route extends React.Component {
                 <div className="boltInfo">
                     <h4>Bolt Placement</h4>
                     <ul>
-                        {this.props.boltDistance.bolts.map((bolt) => <li>{bolt}</li>)}
+                        {this.props.boltDistance.bolts.map((bolt, i) => <li key={i}>{bolt}</li>)}
                     </ul>
+                </div>
+                <div className="climbModel">
+                    <img src="#" alt="3D Model"></img>
+                </div>
+                <div className="submitForm">
+                    <button onClick={ () => this.onAddBeta()}>Add beta!</button>
+                    <form>
+                        <input type="form" placeholder="beta baby"></input>
+                    </form>
                 </div>
             </div>
         )
