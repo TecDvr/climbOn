@@ -4,6 +4,9 @@ import Route from './Route';
 
 export default class Home extends React.Component {
     render() {
+        const boltDistance = {
+            bolts: ['5ft', '10ft', '13ft', '42ft']
+        };
         return (
             <div>
                 <h2>Home Screen</h2>
@@ -11,16 +14,19 @@ export default class Home extends React.Component {
                     name='Culture Shock'
                     location='exit 38'
                     marker='41 24.2028, 2 10.4418'
+                    boltDistance={boltDistance}
                 />
                 <Route 
-                    name='Zachs Climb'
+                    name='Lumpys Revenge'
                     location='Levy'
                     marker='41 24.2028, 2 10.4418'
+                    boltDistance={boltDistance}
                 />
                 <Route 
-                    name='Allys Send'
+                    name='Bora La'
                     location='Index'
                     marker='41 24.2028, 2 10.4418'
+                    boltDistance={boltDistance}
                 />
             </div>
         );

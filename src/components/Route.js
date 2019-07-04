@@ -10,7 +10,13 @@ export default class Route extends React.Component {
                         <p>{this.props.location}</p>
                         <p>{this.props.marker}</p>
                 </div>
+                <div className="boltInfo">
+                    <h4>Bolt Placement</h4>
+                    <ul>
+                        {this.props.boltDistance.bolts.map((bolt) => <li>{bolt}</li>)}
+                    </ul>
+                </div>
             </div>
         )
     }
-}
+} 
