@@ -1,5 +1,6 @@
 import React from 'react';
 import Route from './Route';
+import Map from './Map';
 
 export default class Home extends React.Component {
     render() {
@@ -27,7 +28,9 @@ export default class Home extends React.Component {
                     marker='41 24.2028, 2 10.4418'
                     boltDistance={boltDistance}
                 />
+            
             </div>
+                
         );
     }
 } 
